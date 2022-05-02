@@ -24,13 +24,13 @@ app.get('/v1/explorers/:id', (req, res) =>{
     res.status(200).json(explorer)
 })
 
-app.get('/v1/explorers', (req, res) =>{
+app.post('/v1/explorers', (req, res) =>{
     console.log(`Api Explorers POST request ${new Date()}`)
     const requestBody = req.body //parametros de un cliente
     res.status(201).json({message: "Created"})
 })
 
-app.get('/v1/explorers/:id', (req, res) =>{
+app.put('/v1/explorers/:id', (req, res) =>{
     console.log(`Api Explorers PUT requests ${new Date()}`)
     console.log(`Update Explorer with id ${req.params.id}`)
     const requestBody = req.body //parametro de un cliente
